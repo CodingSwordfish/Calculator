@@ -1,5 +1,5 @@
-let currentValue = "";
-let previousValue = "";
+let currentValue="";
+let previousValue="";
 let operator = "";
 
 // Get references to the main elements
@@ -18,9 +18,28 @@ const operatorButtons = document.querySelectorAll('#operator');
 const decimalButton = document.getElementById('decimal');
 const equalsButton = document.getElementById('equals');
 
-numberButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      currentScreen.textContent += button.textContent;
-      
-    });
-  });
+
+function handleNumbers(){
+
+}
+
+function handleOp(){
+
+}
+
+function clear(){
+
+}
+  
+function calculate (){
+
+}
+
+function handleDecimal(){
+
+}
+  
+
+
+
+ 

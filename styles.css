@@ -47,5 +47,24 @@ body {
     align-items: flex-end;
     gap: 60px;
     font-size: large;
+    
 }
 
+#prevScreen {
+
+
+height: 20px;
+}
+
+#currentScreen{
+    display: flex;
+    
+   
+    height: 20px;
+}
+
+#ac, #del {
+    width: 145px;
+    height: 40px;
+    font-size: large;
+}
