@@ -19,6 +19,22 @@ const decimalButton = document.getElementById('decimal');
 const equalsButton = document.getElementById('equals');
 
 
+numberButtons.addEventListener("click",(e)=>{
+
+});
+
+operatorButtons.addEventListener("click",(e)=>{
+
+});
+
+equalsButton.addEventListener("click",(e)=>{
+
+});
+
+decimalButton.addEventListener("click",(e)=>{
+  
+})
+
 function handleNumbers(){
 
 }
