@@ -19,21 +19,27 @@ const decimalButton = document.getElementById('decimal');
 const equalsButton = document.getElementById('equals');
 
 
-numberButtons.addEventListener("click",(e)=>{
+numberButtons.forEach((button)=>{
+button.addEventListener("click",(e)=>{
+  console.log("hii")
+  });
+})
 
-});
-
-operatorButtons.addEventListener("click",(e)=>{
-
-});
+operatorButtons.forEach((button)=>{
+  button.addEventListener("click",(e)=>{
+    console.log("Helloo")
+  })
+})
 
 equalsButton.addEventListener("click",(e)=>{
-
-});
+  console.log("equals")
+})
 
 decimalButton.addEventListener("click",(e)=>{
-  
+  console.log("decimal")
 })
+
+
 
 function handleNumbers(){
 
