@@ -19,7 +19,10 @@ currentScreen.textContent="";
 });
 
 equals.addEventListener("click",(e)=>{
-  calculate()
+     if(currentValue != "" && previousValue != ""){
+        calculate()
+     }
+ 
 })
 
  numbers.forEach((number)=>{
@@ -37,15 +40,26 @@ currentScreen.textContent = currentValue;
     })
  })
 
+ decimal.addEventListener("click",(e)=>{
+    addDecimal();
+ })
+
  function handleNumber(num){
-    if(currentValue.length <5){
+    if(currentValue.length <8){
         currentValue+= num;
     }
 
  }
 
  function handleOperator(op){
-    operator = op;
+    if(!op){
+        operator = op;
+    }else {
+        operator = op;
+    }
+
+   
+    
     previousValue = currentValue;
     currentValue= ""
 
@@ -77,7 +91,7 @@ currentScreen.textContent = currentValue;
         currentScreen.textContent= currentValue; 
     }
     
-    // previousValue = roundNumber(previousValue)
+    
     previousValue = previousValue.toString();
     currentValue = currentValue.toString();
     console.log(previousValue)
@@ -85,4 +99,11 @@ currentScreen.textContent = currentValue;
 
  function roundNumber(num){
     return Math.round(num*1000)/1000
+ }
+
+ function addDecimal(){
+    if(!currentValue.includes(".")){
+        currentValue+="."
+    }
+    currentScreen.textContent += "."
  }
