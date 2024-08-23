@@ -18,6 +18,10 @@ previousScreen.textContent="";
 currentScreen.textContent="";
 });
 
+equals.addEventListener("click",(e)=>{
+  calculate()
+})
+
  numbers.forEach((number)=>{
 number.addEventListener("click",(e)=>{
     handleNumber(e.target.textContent);
@@ -45,4 +49,40 @@ currentScreen.textContent = currentValue;
     previousValue = currentValue;
     currentValue= ""
 
+ }
+
+ function calculate (){
+    previousValue = Number(previousValue);
+    currentValue = Number(currentValue);
+
+    if(operator === "+"){
+        previousValue += currentValue;
+        currentValue = roundNumber(previousValue);
+        previousScreen.textContent="";
+        currentScreen.textContent= currentValue; 
+    }else if(operator === "-"){
+        previousValue -= currentValue;
+        currentValue = roundNumber(previousValue);
+        previousScreen.textContent="";
+        currentScreen.textContent= currentValue; 
+    } else if(operator==="x"){
+        previousValue *= currentValue;
+        currentValue = roundNumber(previousValue);
+        previousScreen.textContent="";
+        currentScreen.textContent= currentValue; 
+    } else {
+        previousValue /= currentValue;
+        currentValue = roundNumber(previousValue);
+        previousScreen.textContent="";
+        currentScreen.textContent= currentValue; 
+    }
+    
+    // previousValue = roundNumber(previousValue)
+    previousValue = previousValue.toString();
+    currentValue = currentValue.toString();
+    console.log(previousValue)
+ }
+
+ function roundNumber(num){
+    return Math.round(num*1000)/1000
  }
